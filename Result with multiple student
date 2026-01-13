@@ -1,0 +1,43 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class yash
+{
+    int no;
+    string name;
+    int sub1,sub2,sub3;
+public :
+    yash()
+    {
+        cout << "Enter Roll No :- ";
+        cin >> no;
+        cout << "Enter Name :- ";
+        cin >> name;
+        cout << "Enter sub 1 :- ";
+        cin >> sub1;
+        cout << "Enter sub 2 :- ";
+        cin >> sub2;
+        cout << "Enter sub 3 :- ";
+        cin >> sub3;
+    }
+    void show()
+    {
+        cout << "Roll No :- " << no << endl;
+        cout << "Student Name :- " << name<< endl;
+        cout << "Subject 1 :- " << sub1<< endl;
+        cout << "Subject 2 :- " << sub2<< endl;
+        cout << "Subject 3 :- " << sub3<< endl;
+    }
+};
+
+int main()
+{
+    yash y[4];
+
+    for(int i=0;i<4;i++)
+    {
+        yash y[i];
+        y[i].show();
+    }
+    return 0;
+}
