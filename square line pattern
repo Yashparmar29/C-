@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int no1,no2,no3;
+    cout << "Enter no 1 :- ";
+    cin >> no1;
+    
+    for(int i=1;i<=no1;i++)
+    {
+        for(int j=1;j<=no1;j++)
+        {
+            if(i==1 || j==1 || i==no1 || j==no1)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << "\n";
+    }
+}
