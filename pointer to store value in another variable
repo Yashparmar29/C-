@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class method
+{
+    int name;
+    int *p = &name;
+public :
+    method()
+    {
+        cout << "Enter Name :- ";
+        cin >> name;
+
+        cout << "Value of x: " << name << endl;
+        cout << "Address of x: " << &name << endl;
+        cout << "Pointer p stores: " << p << endl;
+        cout << "Value using pointer: " << *p << endl;
+
+    }
+};
+
+int main()
+{
+    method m;
+}
