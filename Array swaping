@@ -1,0 +1,32 @@
+#include<iostream>
+
+using namespace std;
+
+class method
+{
+    string s[5];
+    public :
+        method()
+        {
+            for(int i=0;i<5;i++)
+            {
+                cout << "Enter name :- ";
+                cin >> s[i];
+            }
+            for(int i=0;i<5/2;i++)
+            {
+                string n = s[i];
+                s[i] = s[4-i];
+                s[4-i] = n;
+            }
+            for(int i=0;i<5;i++)
+            {
+                cout << " s[" << i << "] :- " << s[i] << endl;
+            }
+        }
+
+};
+int main()
+{
+    method m;
+}
