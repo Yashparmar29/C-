@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+class method
+{
+    int no[5];
+    public:
+    method()
+    {
+        for(int i=0;i<5;i++)
+        {
+            cout << "Enter no :- ";
+            cin >> no[i];
+        }
+        for(int i=0;i<5;i++)
+        {
+            for(int j=0;j<i;j++)
+            {
+                if(no[i]<no[j])
+                {
+                    int n = no[i];
+                    no[i] = no[j];
+                    no[j] = n;
+                }
+            }
+        }
+        for(int i=0;i<5;i++)
+        {
+            cout << no[i] << endl;
+        }
+    }
+};
+
+int main()
+{
+    method m;
+}
