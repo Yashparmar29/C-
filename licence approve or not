@@ -1,0 +1,13 @@
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int age=15;
+    int car=2;
+    if(age >=18 || car>=1)
+    {
+      cout << "liecense approved" <<endl;
+    }
+}
