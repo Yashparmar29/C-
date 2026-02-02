@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[10], n;
+
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    cout << "Enter elements:\n";
+    for(int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    // Quick Sort logic
+    int stack[10], top = -1;
+
+    // push initial low and high
+    stack[++top] = 0;
+    stack[++top] = n - 1;
+
+    while(top >= 0)
+    {
+        int high = stack[top--];
+        int low = stack[top--];
+
+        int pivot = arr[high];
+        int i = low - 1;
+
+        for(int j = low; j < high; j++)
+        {
+            if(arr[j] < pivot)
+            {
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+
+        int pi = i + 1;
+
+        // push left side
+        if(pi - 1 > low)
+        {
+            stack[++top] = low;
+            stack[++top] = pi - 1;
+        }
+
+        // push right side
+        if(pi + 1 < high)
+        {
+            stack[++top] = pi + 1;
+            stack[++top] = high;
+        }
+    }
+
+    cout << "Sorted array:\n";
+    for(int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+
+    return 0;
+}
