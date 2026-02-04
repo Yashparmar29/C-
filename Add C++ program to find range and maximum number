@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int start, end, maxNum;
+
+    cout << "Enter starting point: ";
+    cin >> start;
+    cout << "Enter ending point: ";
+    cin >> end;
+
+    if (start > end) {
+        int temp = start;
+        start = end;
+        end = temp;
+    }
+ if (start > end) {
+        maxNum = start;
+    } else {
+        maxNum = end;
+    }
+
+    cout << "Final Range: " << start << " to " << end << endl;
+    cout << "Maximum Number: " << maxNum << endl;
+
+    return 0;
+}
