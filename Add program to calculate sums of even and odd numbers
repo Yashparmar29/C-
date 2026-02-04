@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int start, end;
+    int sumEven = 0;
+    int sumOdd = 0;
+
+    cout << "Enter starting point: ";
+    cin >> start;
+    cout << "Enter ending point: ";
+    cin >> end;
+
+    // Manual Swap if start is greater than end
+    if (start > end) {
+        int temp = start;
+        start = end;
+        end = temp;
+    }
+
+    // Loop through the range to calculate sums
+    for (int i = start; i <= end; i++) {
+        if (i % 2 == 0) {
+            sumEven = sumEven + i;
+        } else {
+            sumOdd = sumOdd + i;
+        }
+    }
+
+    cout << "Range: " << start << " to " << end << endl;
+    cout << "Sum of Even numbers: " << sumEven << endl;
+    cout << "Sum of Odd numbers: " << sumOdd << endl;
+
+    return 0;
+}
