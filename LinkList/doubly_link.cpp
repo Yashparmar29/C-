@@ -73,3 +73,50 @@ public:
         cout << "NULL" << endl;
     }
 };
+#include <iostream>
+using namespace std;
+
+// Node and Class definitions from previous steps would go here
+
+int main() {
+    DoublyLinkedList list;
+
+    cout << "--- Building the List ---" << endl;
+    
+    // Adding 10 to an empty list
+    list.insertAtHead(10); 
+    
+    // Adding 5 to the front: 5 <-> 10
+    list.insertAtHead(5);   
+    
+    // Adding 20 to the back: 5 <-> 10 <-> 20
+    list.insertAtTail(20);  
+    
+    // Adding 30 to the back: 5 <-> 10 <-> 20 <-> 30
+    list.insertAtTail(30);  
+
+    cout << "Current List: ";
+    list.displayForward();
+
+    cout << "\n--- Testing Deletions ---" << endl;
+
+    // Delete the head node (5)
+    cout << "Deleting Head (5)..." << endl;
+    list.deleteNode(5);
+    list.displayForward();
+
+    // Delete a middle node (20)
+    cout << "Deleting Middle Node (20)..." << endl;
+    list.deleteNode(20);
+    list.displayForward();
+
+    // Delete the tail node (30)
+    cout << "Deleting Tail (30)..." << endl;
+    list.deleteNode(30);
+    list.displayForward();
+
+    cout << "\nFinal List State: ";
+    list.displayForward(); // Should just be: 10 <-> NULL
+
+    return 0;
+}
