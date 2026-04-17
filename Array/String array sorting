@@ -6,6 +6,7 @@ class method
 {
     string name[5];
     string *n[5];
+    #pointer of arry
     public :
         method()
         {
